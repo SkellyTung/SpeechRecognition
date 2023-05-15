@@ -1,10 +1,6 @@
 import pyaudio
 import wave
 import speech_recognition as sr
-import os
-
-# 獲取當前檔案的路徑
-current_path = os.path.dirname(os.path.abspath(__file__))
 
 
 
@@ -35,7 +31,7 @@ for i in range(0, int(RATE / CHUNK * RECORD_SECONDS)):
 stream.stop_stream()
 stream.close()
 audio.terminate()
-print("Finish Record and Stop Stream...")
+print("Finish record and Stop Stream...")
 
 # 保存錄音文件
 wf = wave.open(WAVE_OUTPUT_FILENAME, 'wb')
@@ -44,7 +40,7 @@ wf.setsampwidth(audio.get_sample_size(FORMAT))
 wf.setframerate(RATE)
 wf.writeframes(b''.join(frames))
 wf.close()
-print("Saving the Record...")
+print("Saving the record....")
 
 
 # 創建Recognizer對象
@@ -52,12 +48,12 @@ r = sr.Recognizer()
 
 # 讀取音頻文件
 audio_file = sr.AudioFile('audio.wav')
-print("Reading the AudioFile...")
+print("Reading the AudioFile....")
 
 # 將音頻文件加載到Recognizer中
 with audio_file as source:
     audio = r.record(source)
-print("Loading the file into Recognizer...")
+print("Loading the file into Recognizer....")
 
 
 # 識別音頻文件中的語音
