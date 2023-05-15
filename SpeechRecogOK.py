@@ -15,7 +15,7 @@ CHANNELS = 1
 RATE = 44100
 CHUNK = 1024
 RECORD_SECONDS = 5
-WAVE_OUTPUT_FILENAME = "audio.wav"
+WAVE_OUTPUT_FILENAME = os.path.join(current_path, "audio.wav")  # 完整的音訊檔案路徑
 
 # 創建PyAudio對象
 audio = pyaudio.PyAudio()
@@ -52,7 +52,7 @@ print("Saving the Record...")
 r = sr.Recognizer()
 
 # 讀取音頻文件
-audio_file = sr.AudioFile('audio.wav')
+audio_file = sr.AudioFile(os.path.join(current_path, "audio.wav"))  # 完整的音訊檔案路徑
 print("Reading the AudioFile...")
 
 # 將音頻文件加載到Recognizer中
