@@ -3,7 +3,8 @@ import wave
 import speech_recognition as sr
 import os
 
-# 獲取當前檔案的路徑
+# 獲取當前檔案的路徑 test
+# 在程式碼的開頭使用__file__變數來獲取當前檔案的路徑，然後搭配os.path模組中的函數來處理路徑，以獲取"audio.wav"和"model.onnx"的完整路徑。
 current_path = os.path.dirname(os.path.abspath(__file__))
 
 
