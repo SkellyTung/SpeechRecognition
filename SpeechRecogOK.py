@@ -105,7 +105,7 @@ graph.input.extend([input_tensor])
 
 # 輸出
 output_name = "output"
-output_shape = (1,)
+output_shape = (1,16000)
 output_type = onnx.TensorProto.STRING
 
 output_tensor = helper.make_tensor_value_info(
