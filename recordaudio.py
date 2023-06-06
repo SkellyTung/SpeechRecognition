@@ -7,7 +7,7 @@ CHANNELS = 1
 RATE = 44100
 CHUNK = 1024
 RECORD_SECONDS = 5
-WAVE_OUTPUT_FILENAME = "audio.wav"
+WAVE_OUTPUT_FILENAME = "audio.mp3"
 
 # 創建PyAudio對象
 audio = pyaudio.PyAudio()
